@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger Theme Background</title>
+    <style>
+        body {
+            background-color: #121212;
+        }
+        
+        .msg-box {
+    background-color: rgb(58,59,60);
+    color: rgb(228,230,235);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* center horizontally */
+    align-items: center; /* center vertically */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+}
+
+        
+        .msg-box p {
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        #btn {
+            background-color: #1badf6;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        #btn:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+   <div class="msg-box">
+       <p>
+            Hello crush I really like you! &#128525;
+            <button id="btn">
+                Send
+            </button>
+       </p>
+       <script>
+           let btn = document.getElementById('btn');
+           let position;
+           btn.addEventListener('mouseover', () => {
+            position = position ? 0 :100;
+            btn.style.transform = 'translate(' + position + 'px,0px)';   
+           });
+        
+       </script>
+   </div> 
+</body>
+</html>
